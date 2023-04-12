@@ -849,6 +849,12 @@ pub unsafe extern "C" fn fd_read(
     State::with(|state| {
         match state.descriptors().get(fd)? {
             Descriptor::Streams(streams) => {
+                if let StreamType::File(file) = &streams.type_ {
+                    if let filesystem::DescriptorType::Directory = file.descriptor_type {
+                        return Err(ERRNO_ISDIR);
+                    }
+                }
+
                 let wasi_stream = streams.get_read_stream()?;
 
                 let read_len = u64::try_from(len).trapping_unwrap();
