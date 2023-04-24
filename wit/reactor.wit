@@ -23,6 +23,7 @@ default world reactor {
   import mysql: pkg.mysql
   import redis: pkg.redis
   import key-value: pkg.key-value
+  import sqlite: pkg.sqlite
   import http: pkg.http
   export inbound-http: pkg.inbound-http
   export inbound-redis: pkg.inbound-redis
