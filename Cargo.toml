@@ -18,10 +18,10 @@ tracing = "0.1.26"
 cap-std = "1.0.12"
 cap-rand = "1.0.12"
 cap-fs-ext = "1.0.12"
-cap-net-ext = "1.0.12"
+cap-net-ext = "1.0.14"
 bitflags = "1.2"
 windows-sys = "0.48.0"
-rustix = "0.37.9"
+rustix = "0.37"
 async-trait = "0.1.59"
 io-lifetimes = { version = "1.0.0", default-features = false }
 wasi-common = { path = "wasi-common" }
