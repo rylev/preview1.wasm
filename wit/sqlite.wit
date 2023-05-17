@@ -24,10 +24,7 @@ default interface sqlite {
   open: func(database: string) -> result<connection, error>
 
   // Execute a statement
-  execute: func(conn: connection, statement: string, parameters: list<value>) -> result<_, error>
-
-  // Query data
-  query: func(conn: connection, query: string, parameters: list<value>) -> result<query-result, error>
+  execute: func(conn: connection, statement: string, parameters: list<value>) -> result<query-result, error>
 
   // Close the specified `connection`.
   close: func(conn: connection)

@@ -140,8 +140,6 @@ wrap_import!("sqlite:open" sqlite_open "sqlite" "open" a0 a1 a2);
 
 wrap_import!("sqlite:execute" sqlite_execute "sqlite" "execute" a0 a1 a2 a3 a4 a5);
 
-wrap_import!("sqlite:query" sqlite_query "sqlite" "query" a0 a1 a2 a3 a4 a5);
-
 wrap_import!("sqlite:close" sqlite_close "sqlite" "close" a0);
 
 wrap_import!("key-value:open" key_value_open "key-value" "open"
