@@ -142,6 +142,12 @@ wrap_import!("sqlite:execute" sqlite_execute "sqlite" "execute" a0 a1 a2 a3 a4 a
 
 wrap_import!("sqlite:close" sqlite_close "sqlite" "close" a0);
 
+wrap_import!("sqlite:get-columns" get_columns "sqlite" "get-columns" a0 a1);
+
+wrap_import!("sqlite:get-row-result" get_row_result "sqlite" "get-row-result" a0 a1 a2);
+
+wrap_import!("sqlite:free-query-result" free_query_result "sqlite" "free-query-result" a0);
+
 wrap_import!("key-value:open" key_value_open "key-value" "open"
              a0 a1 a2);
 
